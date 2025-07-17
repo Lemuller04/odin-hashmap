@@ -7,30 +7,25 @@ const run = async () => {
 
   // Write tests below:
 
-  const test = HashMap();
+  const map = HashMap();
 
-  test.set("apple", "red");
-  test.set("banana", "yellow");
-  test.set("carrot", "orange");
-  test.set("dog", "brown");
-  test.set("elephant", "gray");
-  test.set("frog", "green");
-  test.set("grape", "purple");
-  test.set("hat", "black");
-  test.set("ice cream", "white");
-  test.set("jacket", "blue");
-  test.set("kite", "pink");
-  test.set("lion", "golden");
+  map.set("apple", "fruit");
+  map.set("carrot", "vegetable");
+  map.set("banana", "fruit");
 
-  console.log(test.length());
-  console.log(test.get("kite"));
-  console.log(test.has("kite"));
-  test.remove("kite");
-  console.log(test.length());
-  console.log(test.get("kite"));
-  console.log(test.has("kite"));
-  test.clear();
-  console.log(test.length());
+  console.log(map.get("carrot")); // "vegetable"
+  console.log(map.has("apple")); // true
+
+  map.remove("banana");
+
+  console.log(map.length()); // 2
+
+  console.log(map.keys()); // ["apple", "carrot"]
+  console.log(map.values()); // ["fruit", "vegetable"]
+  console.log(map.entries()); // [["apple", "fruit"], ["carrot", "vegetable"]]
+
+  map.clear();
+  console.log(map.length()); // 0
 };
 
 run();
