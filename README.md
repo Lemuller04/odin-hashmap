@@ -22,6 +22,8 @@ A simple HashMap implementation in JavaScript for learning data structures and c
 - values() – Returns all values as an array.
 - entries() – Returns key-value pairs as an array of arrays.
 
+## Usage
+
 ``` JavaScript
 import { HashMap } from "./hashmap.js";
 
